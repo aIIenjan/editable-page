@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+        <meta charset="utf-8" /> 
+        <title>demo1</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+        <script type="text/javascript" src="../js/jquery.js"></script> 
+        <script type='text/javascript' src='../js/jquery-ui.min.js'></script>	
+	</head>
+	<body>
+		<STYLE>
+.ui-widget-content{
+    z-index:500;
+	width: 100px;
+	height: 100px;
+	padding: 0.5em;
+	float: left;
+	margin: 10px 10px 10px 0;
+}
+#droppable {
+	z-index:5;
+	width: 650px;
+	height: 800px;
+	padding: 0.5em;
+	float: left;
+	margin: 10px;
+	border: solid 3px #ccc;
+}
+</STYLE>		<SCRIPT>
+
+			$(function() {          
+				$( ".ui-widget-content" ).draggable({
+					revert	: 'invalid',
+					opacity	: 0.7,
+					helper	: 'clone',
+					scope	: 'drop'
+				});
+				$( "#droppable" ).droppable({
+					scope	: 'drop',
+					drop	: function( event,ui ) {
+						var ud = ui.draggable;
+						if( ud.draggable( "option", "helper" ) == "clone" ) {
+							ud.clone()
+							.appendTo($( "#droppable" ))
+							.css({
+								position	: 'absolute',
+								left 		: ui.offset.left,
+								top			: ui.offset.top							
+							})
+							.draggable({
+								scope	: 'drop',
+								revert	: 'invalid'
+							})
+							.resizable();  
+						}						                        
+					},
+					out		: function( event, ui ) {
+						ui.draggable.remove();						
+					}
+				});                   
+			});
+	</SCRIPT>		
+			<DIV class="ui-widget-content" name="1">
+				<img alt="1" src="4.jpg" >
+			</DIV>
+			<DIV class="ui-widget-content" name="2">
+				<img alt="2" src="4.jpg">
+			</DIV>
+			<DIV class="ui-widget-content" name="3">
+				<img alt="3" src="4.jpg">
+			</DIV>
+			<DIV class="ui-widget-content" name="4">
+				<img alt="4" src="4.jpg">
+			</DIV>
+		</DIV>
+		<DIV class="demo">
+
+			<DIV class="ui-widget-header" id="droppable">
+				<P>
+					Drop here 28
+				</P>
+			</DIV>
+		<!-- End demo -->
+		<DIV class="demo-description" style="DISPLAY: none">
+			<P>
+				Enable any DOM element to be droppable, a target for draggable
+				elements.
+			</P>
+		</DIV>
+		<!-- End demo-description -->
+	</body>
+</html>
