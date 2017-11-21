@@ -1,5 +1,13 @@
 .edit-body { padding-top: 90px; overflow: hidden; }
-header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-width: 1280px; height: 90px; line-height: 90px; background-color:grey;  }
+header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-width: 1280px; height: 90px; line-height: 90px; /*border-bottom: #6eade8 5px solid;*/
+    /*background: -webkit-linear-gradient(right,#03417b 0,#5c90c2 100%);
+    background: -o-linear-gradient(right,#03417b 0,#5c90c2 100%);
+    background: -webkit-gradient(linear,top left,left right,from(#5cb85c),to(#5c90c2));
+    background: linear-gradient(to left,#d1e8fd 0,#0359aa 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);*/
+    background: url(../images/bg_top1.jpg) repeat-x;
+ }
 .hd-box { display: none; font-size: 0; height: 28px; line-height: 28px; border-radius: 15px; padding: 0 10px; }
 .dis-inline { display: inline-block; *display: inline; *zoom: 1; *float: left; vertical-align: middle; }
 .hd-box .icon { margin-right: 10px; }
@@ -8,7 +16,8 @@ header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-wi
 .hd-ri { width: 70%; text-align: right; }
 .hd-ri .hd-box { margin: 0 2%; }
 .container { height: 800px; overflow: hidden; }
-.leftbar { position:relative; float:left; width:10%; height:100%; background: #ccc; }
-.rightbar { position:relative; float:left;width: 90%; height: 100%; overflow: hidden; }
+.leftbar { position:relative; float:left; width:11%; height:100%; background: #f2f2f2; }
+.left-content { border: #0a5d86 2px solid; }
+.rightbar { position:relative; float:left; width: 88%; height: 100%; border-left: #b1b2b2 2px solid; overflow: hidden; }
 .right-wrap { position:relative; float:left;width: 100%; height: 100%; overflow: hidden; }
 .content-bd { height: 3000px; }
