@@ -1,13 +1,5 @@
 .edit-body { padding-top: 90px; overflow: hidden; }
-header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-width: 1280px; height: 90px; line-height: 90px; /*border-bottom: #6eade8 5px solid;*/
-    /*background: -webkit-linear-gradient(right,#03417b 0,#5c90c2 100%);
-    background: -o-linear-gradient(right,#03417b 0,#5c90c2 100%);
-    background: -webkit-gradient(linear,top left,left right,from(#5cb85c),to(#5c90c2));
-    background: linear-gradient(to left,#d1e8fd 0,#0359aa 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);*/
-    background: url(../images/bg_top1.jpg) repeat-x;
- }
+header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-width: 1280px; height: 90px; line-height: 90px; background: url(../images/bg_top.jpg) repeat-x; }
 .hd-box { display: none; font-size: 0; height: 28px; line-height: 28px; border-radius: 15px; padding: 0 10px; }
 .dis-inline { display: inline-block; *display: inline; *zoom: 1; *float: left; vertical-align: middle; }
 .hd-box .icon { margin-right: 10px; }
