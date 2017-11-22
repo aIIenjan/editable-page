@@ -11,55 +11,71 @@
     <link rel="stylesheet" href="../css/jquery.ui.ruler.css">
     <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/content.css">
+	<link rel="stylesheet" href="../css/content.css">
+	<link rel="stylesheet" href="../css/edit.css">
 </head>
-<body class="edit-body">
-<header>
-	<div class="fl hd-le">
-		<button class="hd-box dis-inline btn-success">
-			<i class="icon iconfont icon-set dis-inline"></i>
-			<span class="dis-inline">模板信息</span>
-		</button>
-	</div>
-	<div class="fr hd-ri">
-		<button class="hd-box dis-inline btn-warning" id="view-fullscreen">
-			<i class="icon iconfont icon-fullscreen dis-inline"></i>
-			<span class="dis-inline">全屏</span>
-		</button>
-		<button class="hd-box btn-warning" id="cancel-fullscreen">
-			<i class="icon iconfont icon-fullscreen dis-inline"></i>
-			<span class="dis-inline">退出全屏</span>
-		</button>
-		<button class="hd-box dis-inline btn-info">
-			<i class="icon iconfont icon-eye dis-inline"></i>
-			<span class="dis-inline">预览</span>
-		</button>
-		<button class="hd-box dis-inline btn-primary">
-			<i class="icon iconfont icon-save dis-inline"></i>
-			<span class="dis-inline">保存</span>
-		</button>
-	</div>
-</header>
-<div class="container">
-	<div class="leftbar">
-		<div style="height: 400px;">sssss</div>
-		<div style="height: 400px;">sssss</div>
-		<div style="height: 400px;">sssss</div>
-		<div style="height: 400px;">sssss</div>
-		<div style="height: 400px;">sssss</div>
-		<div style="height: 400px;">sssss</div>
-	</div>
-	<div class="rightbar" id="content">
-		<div class="right-wrap">
-			<div class="content-bd"></div>
+<body  class="edit-body">
+	<div id="app">	
+		
+		<header>
+			<div class="fl hd-le">
+				<button class="hd-box dis-inline btn-success" @click="modelInfoShow()">
+					<i class="icon iconfont icon-set dis-inline"></i>
+					<span class="dis-inline">模板信息</span>
+				</button>
+			</div>
+			<div class="fr hd-ri">
+				<button class="hd-box dis-inline btn-warning" id="view-fullscreen">
+					<i class="icon iconfont icon-fullscreen dis-inline"></i>
+					<span class="dis-inline">全屏</span>
+				</button>
+				<button class="hd-box btn-warning" id="cancel-fullscreen">
+					<i class="icon iconfont icon-fullscreen dis-inline"></i>
+					<span class="dis-inline">退出全屏</span>
+				</button>
+				<button class="hd-box dis-inline btn-info">
+					<i class="icon iconfont icon-eye dis-inline"></i>
+					<span class="dis-inline">预览</span>
+				</button>
+				<button class="hd-box dis-inline btn-primary">
+					<i class="icon iconfont icon-save dis-inline"></i>
+					<span class="dis-inline">保存</span>
+				</button>
+			</div>
+		</header>
+		<div class="container">
+			<div class="leftbar">
+				<div style="height: 400px;">sssss</div>
+				<div style="height: 400px;">sssss</div>
+				<div style="height: 400px;">sssss</div>
+				<div style="height: 400px;">sssss</div>
+				<div style="height: 400px;">sssss</div>
+				<div style="height: 400px;">sssss</div>
+			</div>
+			<div class="rightbar" id="content">
+				<div class="right-wrap">
+					<div class="content-bd"></div>
+				</div>
+			</div>
 		</div>
-	</div>
+
+
+		<div class="model-info" v-if="modelInfo">
+			
+		</div>
+
 </div>
+
+
+
+
 <script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/vue.2.5.1.min.js"></script>
 <script src="../js/fullscreen.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/jquery.mCustomScrollbar.min.js"></script><!--滚动条js-->
 <script src="../js/jquery.ui.ruler.js"></script><!--标尺js-->
 <script src="../js/common.js"></script>
+<script src="../js/edit.js"></script>
 </body>
 </html>
