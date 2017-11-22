@@ -11,11 +11,6 @@ $(function() {
 		autoHeight($('.container'))
 	});
 
-	// 折叠层
-	$('#slidebar').accordion({
-      collapsible: true
-    });
-
 	// 左浮动滚动条效果
     $('.leftbar').mCustomScrollbar({
 		scrollButtons:{enable:true},
@@ -32,4 +27,15 @@ $(function() {
         showLabel: true,
         arrowStyle: 'arrow'
     });
-})
+});
+
+// 折叠层
+function toggleFun($this) {
+	if($this.hasClass('cur')) {
+		$this.removeClass('cur');
+		$this.next('.tag-con').removeClass('cur');
+	}else {
+		$this.addClass('cur');
+		$this.next('.tag-con').addClass('cur');
+	}
+}

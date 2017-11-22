@@ -33,6 +33,7 @@
     var viewFullScreen = document.getElementById('view-fullscreen');
     if (viewFullScreen) {
         var checkFull = viewFullScreen.addEventListener("click", function () {
+            // alert(1);
             if($obj.hasClass('on')) {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();

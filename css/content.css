@@ -2,7 +2,7 @@
 html { width: 100%; height: 100%; overflow: hidden; box-sizing: border-box; }
 header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-width: 1280px; height: 90px; line-height: 90px; background: url(../images/bg_top.jpg) repeat-x; }
 .hd-box { display: none; font-size: 0; height: 28px; line-height: 28px; border-radius: 15px; padding: 0 10px; }
-.dis-inline { display: inline-block; *display: inline; *zoom: 1; *float: left; vertical-align: middle; }
+.dis-inline, .tag-con-list img, .tag-con-list span { display: inline-block; *display: inline; *zoom: 1; *float: left; vertical-align: middle; }
 .hd-box .icon { margin-right: 10px; }
 .hd-box span { font-size: 14px; }
 .hd-le { width: 30%; }
@@ -11,9 +11,19 @@ header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-wi
 .hd-ri .hd-box.on .icon-fullscreen:before { content: "\e6c5"; }
 .hd-ri .hd-box { margin: 0 2%; }
 .container { height: 800px; overflow: hidden; }
-.leftbar { position:relative; float:left; width:12%; height:100%; background: #f2f2f2; }
+.leftbar { position:relative; float:left; width:12%; height:100%; background: #f5f5f5; }
 .rightbar { position:relative; float:left; width: 88%; height: 100%; overflow: hidden; }
-.leftline { position: absolute; right: 0; top: 0; width: 2px; height: 100%; background: #3b91bb; }
+.leftline { position: fixed; left: 11.88%; top: 90px; width: 1px; height: 100%; background: #000; z-index: 10; }
 .right-wrap { position:relative; float:left;width: 100%; height: 100%; overflow: hidden; }
 .content-bd { height: 3000px; }
 .rightbar .ef-ruler { overflow: hidden; overflow-y: scroll; }
+
+/*tag-hd*/
+.tag-hd { cursor: pointer; position: relative; margin: 10px 5px 5px; text-align: center; color: #333; font-size: 16px; background: #ddd; height: 30px; line-height: 30px; border: #b1b1b1 1px solid; z-index: 2; }
+.tag-con { position: relative; margin: 5px; height: 0; overflow: hidden; transition: all 2s; z-index: 1; }
+.tag-con.cur { height: auto; }
+.tag-con-list { font-size: 0; margin: 5px; }
+.tag-con-list img { max-width: 35%; margin-right: 5%; background: #fff; }
+.tag-con-list img, .tag-con-list span { font-size: 14px; }
+.tag-hd i { position: absolute; left: 15px; top: 8px; width:0; height:0; border-top:7px solid transparent; border-bottom:7px solid transparent; border-left:9px solid #999;  }
+.tag-hd.cur i { border-right:7px solid transparent; border-left:7px solid transparent; border-top: 9px solid #999; top: 12px; }
