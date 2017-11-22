@@ -11,6 +11,11 @@ $(function() {
 		autoHeight($('.container'))
 	});
 
+	// 折叠层
+	$('#slidebar').accordion({
+      collapsible: true
+    });
+
 	// 左浮动滚动条效果
     $('.leftbar').mCustomScrollbar({
 		scrollButtons:{enable:true},
