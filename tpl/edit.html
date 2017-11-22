@@ -61,7 +61,41 @@
 
 
 		<div class="model-info">
-			<p>KJFIEFJDKNSSLDKJFDKFJDKFDNFVLKDJFKDJKDJFKSDFSDFSFSFD</p>
+			<div class="info-item">
+				<div class="info-item-title">
+					<p>模板信息</p>
+					<button type="button">确定</button>
+					<button type="button" @click="modelInfoShow()">取消</button>
+				</div>
+				<div class="info-item-cont" >
+					<div class="form-group">
+						<label for="t_name">名称<span>*</span></label>
+						<input type="text" class="model-name" id="t_name" placeholder="模板名称" value="广州test">
+					</div>
+					<div class="form-group">
+						<label for="t_resolution">分辨率</label>
+						<select class="model-resolution" id="t_resolution" disabled="disabled">	
+							<option value="1280*720">1280*720</option>  
+							<option value="1920*1080" selected="">1920*1080</option> 
+							<option value="3840*2160">3840*2160</option> 
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="t_bg_color">背景颜色 (RGB)</label>
+						<input type="text" class="model-color" id="t_bg_color" placeholder="背景颜色" value="">
+					</div>
+					<div class="form-group">
+						<label for="t_bg_img">背景图片<span>*</span></label>
+						<div class="input-group">
+							<input type="text" readonly="readonly" class="model-img" id="t_bg_img" placeholder="选择图片" value="">
+						</div><button class="select-img-btn btn-success" type="button" target="t_bg_img">选择图片</button>
+					</div>
+					<div class="form-group">
+						<img src="../images/bg_top.jpg" alt="" style="height: 100px" title="模板背景图片">
+					</div>
+
+				</div>
+			</div>
 		</div>
 
 </div>

@@ -5,12 +5,12 @@ new Vue({
 		modelInfo: false,
 	},
 	methods:{
-		modelInfoShow(){
+		modelInfoShow: function(){
 			this.modelInfo = !this.modelInfo;
 			this.modelInfo ? $( '.model-info' ).css({left: 0}) : $( '.model-info' ).css({left: -502})
 		}
 	},
-	mounted(){
+	mounted: function(){
 
 	},
 	components:{
