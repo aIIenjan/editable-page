@@ -1,4 +1,5 @@
 /*重设滚动条*/
+.mCSB_inside > .mCSB_container { margin-right: 0; }
 .leftbar .mCSB_scrollTools .mCSB_draggerContainer { right: -7px; }
 .leftbar .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .leftbar .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { width: 3px; border-radius: 2px; background-color: rgba(0,0,0,.6); }
 .leftbar .mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar { background-color: rgba(0,0,0,.4); }

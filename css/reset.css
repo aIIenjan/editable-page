@@ -25,6 +25,3 @@ input[type=submit],input[type=button]{ transition: .2s ease-in-out;-moz-transiti
 .fl { float: left; }
 .fr { float: right; }
 .hide { display: none; }
-.wrap { position: relative; width: 1200px; margin: 0 auto; }
-.inner-wrap { padding-top: 55px; }
-.red { color: red; }

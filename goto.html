@@ -21,10 +21,11 @@
 		<button class="goto" type="button">转到编辑页面</button>
 		
 		<script type="text/javascript">
-			
+			var w=screen.availWidth+10;
+			var h=screen.availHeight-30;
 			var gotos = document.querySelector('.goto')
 			gotos.onclick = function(){
-				var myOpen = window.open( './tpl/edit.html',"_blank","resizable='no',scrollbars='no'" )
+				var myOpen = window.open( './tpl/edit.html',"_blank","resizable=1, scrollbars=1, width=" + w + ",height=" + h + ", top=0, left=0")
 				myOpen.focus()
 			}
 			
