@@ -1,11 +1,39 @@
 (function () {
+    var isFull = false;
     var $obj = $('#view-fullscreen');
-    var viewFullScreen = document.getElementById("view-fullscreen");
+
+    // 判断是否全屏状态
+    function fullScreenAuto() {
+        isFull = !isFull;
+        if(isFull) {
+            $obj.addClass('on');
+            $obj.find('span').html('退出全屏');
+        }else {
+            $obj.removeClass('on');
+            $obj.find('span').html('全屏');
+        }
+    }
+
+    // 全屏浏览器兼容
+    document.addEventListener('webkitfullscreenchange', function(){
+        fullScreenAuto();
+    }); 
+    document.addEventListener('fullscreenchange', function(){
+        fullScreenAuto();
+    });
+
+    document.addEventListener('mozfullscreenchange', function(){
+        fullScreenAuto();
+    });
+
+    document.addEventListener('MSFullscreenChange', function(){
+        fullScreenAuto();
+    });
+
+    var viewFullScreen = document.getElementById('view-fullscreen');
     if (viewFullScreen) {
         var checkFull = viewFullScreen.addEventListener("click", function () {
             if($obj.hasClass('on')) {
-                $obj.removeClass('on');
-                // $obj.find('span').html('全屏');
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
                 }
@@ -18,11 +46,7 @@
                 else if (document.webkitCancelFullScreen) {
                     document.webkitCancelFullScreen();
                 }
-                // viewFullScreen.style.display = 'inline-block';
-                // cancelFullScreen.style.display = 'none';
             }else {
-                $obj.addClass('on');
-                // $obj.find('span').html('退出全屏');
                 var docElm = document.documentElement;
                 if (docElm.requestFullscreen) {
                     docElm.requestFullscreen();
@@ -37,8 +61,6 @@
                 else if (docElm.webkitRequestFullScreen) {
                     docElm.webkitRequestFullScreen();
                 }
-                // cancelFullScreen.style.display = 'inline-block';
-                // viewFullScreen.style.display = 'none';
             }
         }, false);
     }

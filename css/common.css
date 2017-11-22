@@ -1,8 +1,9 @@
-.mCSB_scrollTools .mCSB_draggerContainer { right: -7px; }
-.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { width: 3px; border-radius: 2px; background-color: rgba(0,0,0,.6); }
-.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar { background-color: rgba(0,0,0,.4); }
-.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(0,0,0,.4); }
-.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail { background: none; }
+/*重设滚动条*/
+.leftbar .mCSB_scrollTools .mCSB_draggerContainer { right: -7px; }
+.leftbar .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .leftbar .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { width: 3px; border-radius: 2px; background-color: rgba(0,0,0,.6); }
+.leftbar .mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar { background-color: rgba(0,0,0,.4); }
+.leftbar .mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(0,0,0,.4); }
+.leftbar .mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, .leftbar .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail { background: none; }
 
 /*button*/
 .btn-success {
@@ -24,14 +25,15 @@
     color: #fff;
 }
 .btn-warning {
-    background-image: -webkit-linear-gradient(top,#f0ad4e 0,#eb9316 100%);
+   /* background-image: -webkit-linear-gradient(top,#f0ad4e 0,#eb9316 100%);
     background-image: -o-linear-gradient(top,#f0ad4e 0,#eb9316 100%);
     background-image: -webkit-gradient(linear,left top,left bottom,from(#f0ad4e),to(#eb9316));
     background-image: linear-gradient(to bottom,#f0ad4e 0,#eb9316 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffeb9316', GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
     background-repeat: repeat-x;
-    border-color: #e38d13;
+    border-color: #e38d13;*/
+    background: #f0ad4e;
 }
 .btn-info {
     background-image: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);

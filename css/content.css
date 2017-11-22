@@ -6,6 +6,8 @@ header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-wi
 .hd-box span { font-size: 14px; }
 .hd-le { width: 30%; }
 .hd-ri { width: 70%; text-align: right; }
+.hd-ri .hd-box.on { background: #f00; }
+.hd-ri .hd-box.on .icon-fullscreen:before { content: "\e6c5"; }
 .hd-ri .hd-box { margin: 0 2%; }
 .container { height: 800px; overflow: hidden; }
 .leftbar { position:relative; float:left; width:11%; height:100%; background: #f2f2f2; }
