@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.goto{
+				padding: 10px;
+				border-radius: 3px;
+				margin: 30px;
+				border: 1px solid #aaa;
+				background: #fff;
+				cursor: pointer;
+			}
+			.goto:hover{
+				background: #eee;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="goto" type="button">转到编辑页面</button>
+		
+		<script type="text/javascript">
+			
+			var gotos = document.querySelector('.goto')
+			gotos.onclick = function(){
+				var myOpen = window.open( './tpl/edit.html',"_blank","resizable='no',scrollbars='no'" )
+				myOpen.focus()
+			}
+			
+		</script>
+	</body>
+</html>
