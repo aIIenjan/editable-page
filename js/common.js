@@ -31,18 +31,16 @@ $(function() {
         tickMinor: 20,
         tickMicro: 10,
         showLabel: true,
-        arrowStyle: 'arrow',
-        screenWidth: '1920'
+        arrowStyle: 'arrow'
     });
 });
 
-// 折叠层
+// 折叠层js
 function toggleFun($this) {
+	$this.next('.tag-con').slideToggle()
 	if($this.hasClass('cur')) {
 		$this.removeClass('cur');
-		$this.next('.tag-con').removeClass('cur');
 	}else {
 		$this.addClass('cur');
-		$this.next('.tag-con').addClass('cur');
 	}
 }

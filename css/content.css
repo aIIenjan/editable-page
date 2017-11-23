@@ -20,7 +20,7 @@ header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-wi
 
 /*tag-hd*/
 .tag-hd { cursor: pointer; position: relative; margin: 10px 5px 5px; text-align: center; color: #333; font-size: 16px; background: #ddd; height: 30px; line-height: 30px; border: #b1b1b1 1px solid; z-index: 2; }
-.tag-con { position: relative; margin: 5px; height: 0; overflow: hidden; transition: all 2s; z-index: 1; }
+.tag-con { position: relative; margin: 5px; overflow: hidden; z-index: 1; }
 .tag-con.cur { height: auto; }
 .tag-con-list { font-size: 0; margin: 5px; }
 .tag-con-list img { max-width: 35%; margin-right: 5%; background: #fff; }
