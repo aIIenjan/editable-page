@@ -141,7 +141,7 @@
 			<div class="rightbar" id="content">
 				<div class="leftline"></div>
 				<div class="right-wrap">
-					<div class="content-wrap"></div>
+					<div class="content-wrap" :style="isback_color"></div>
 				</div>
 			</div>
 		</div>
@@ -149,7 +149,7 @@
 			<div class="info-item">
 				<div class="info-item-title">
 					<p>模板信息</p>
-					<button type="button">确定</button>
+					<button type="button" @click="saveData()">确定</button>
 					<button type="button" @click="modelInfoShow()">取消</button>
 				</div>
 				<div class="info-item-cont" >
@@ -166,8 +166,8 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="t_bg_color">背景颜色 (RGB)</label>
-						<input type="text" class="model-color" id="t_bg_color" placeholder="背景颜色" value="">
+						<label for="t_bg_color">背景颜色 (RGB/十六进制)</label>
+						<input type="text" class="model-color" id="t_bg_color" placeholder="背景颜色" maxlength="11" v-model="back_color" value="">
 					</div>
 					<div class="form-group">
 						<label for="t_bg_img">背景图片<span>*</span></label>
