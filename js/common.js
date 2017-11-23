@@ -1,12 +1,9 @@
 $(function() {
 
 	// 禁止右键功能
-	document.oncontextmenu = function(e){
-		e.preventDefault();
-		// var xx = e.originalEvent.x || e.originalEvent.layerX || 0;
-		// var yy = e.originalEvent.y || e.originalEvent.layerY || 0;
-		// alert(xx + '---' + yy);
-	}
+	// document.oncontextmenu = function(e){
+	// 	e.preventDefault();
+	// }
 
 	// 左边变化js
 	function autoHeight($obj) {
@@ -34,7 +31,8 @@ $(function() {
         tickMinor: 20,
         tickMicro: 10,
         showLabel: true,
-        arrowStyle: 'arrow'
+        arrowStyle: 'arrow',
+        screenWidth: '1920'
     });
 });
 
