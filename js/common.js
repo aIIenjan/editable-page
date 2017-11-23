@@ -1,4 +1,13 @@
 $(function() {
+
+	// 禁止右键功能
+	document.oncontextmenu = function(e){
+		e.preventDefault();
+		// var xx = e.originalEvent.x || e.originalEvent.layerX || 0;
+		// var yy = e.originalEvent.y || e.originalEvent.layerY || 0;
+		// alert(xx + '---' + yy);
+	}
+
 	// 左边变化js
 	function autoHeight($obj) {
 		var $winHeight = $(window).height();
