@@ -281,6 +281,20 @@
  //        this._changeBg(url);  
  //    };
  //    $('#content').ruler('changeBgImag','../images/bg_top.jpg');
+
+	//颜色选择器
+	$('#t_bg_color').colpick({
+		layout:'hex',
+		submit:0,
+		onChange:function(hsb,hex,rgb,el,bySetColor) {
+			
+			$(el).css('border-color','#'+hex);
+			$( '.content-wrap' ).css('background','#'+hex);//改模板背景
+			if(!bySetColor) $(el).val(hex);
+		}
+	}).keyup(function(){
+		$(this).colpickSetColor(this.value);
+	});
 })(jQuery);
 
 // 折叠层js

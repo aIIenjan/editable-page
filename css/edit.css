@@ -117,3 +117,7 @@
   border-bottom-left-radius: 0px;
   white-space: nowrap;
 }
+
+.colpick_hex {
+  z-index: 888;
+}
