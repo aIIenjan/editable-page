@@ -96,6 +96,7 @@
             .model-name{
 
             }
+            
             .model-resolution{
                 cursor: no-drop;
             }
@@ -125,6 +126,10 @@
 
         }
     }
+}
+
+.colpick_hex {
+    z-index: 888;
 }
 
 
