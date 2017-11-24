@@ -48,6 +48,9 @@ $(function() {
 		$(this).colpickSetColor(this.value);
 	});
 
+
+	
+
 });
 
 // 折叠层js
