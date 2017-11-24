@@ -16,7 +16,7 @@ header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-wi
 .leftline { position: absolute; left: -25px; top: 0; width: 1px; height: 100%; background: #000; z-index: 100; }
 .right-wrap { position:relative; float:left;width: 100%; height: 100%; overflow: hidden; }
 .content-bd { height: 3000px; }
-.rightbar .ef-ruler { overflow: hidden; overflow-y: scroll; }
+.rightbar .ef-ruler { overflow: hidden; overflow-y: scroll; background: #f2f2f2; }
 
 /*tag-hd*/
 .tag-hd { cursor: pointer; position: relative; margin: 10px 5px 5px; text-align: center; color: #333; font-size: 16px; background: #ddd; height: 30px; line-height: 30px; border: #b1b1b1 1px solid; z-index: 2; }
@@ -29,4 +29,8 @@ header { position: fixed; top: 0; left: 0; padding: 0 0 0 2%; width: 98%; min-wi
 .tag-hd.cur i { border-right:7px solid transparent; border-left:7px solid transparent; border-top: 9px solid #999; top: 12px; }
 /*content-wrap*/
 .ef-ruler .stage { width: 100%; height: 100%; }
-.content-wrap { width: 100%; /*min-width: 1280px;*/ height: 100%; background: url(../pic/con_bg.png) no-repeat; /*background-size: 100%;*/ }
+.screen { width: 100%; height: 2000px; padding: 19px 0 0 19px; background-repeat: no-repeat; background-size: 100%; }
+.content-wrap { width: 100%; /*min-width: 1280px;*/ height: 2000px; background: url(../pic/con_bg.png) center 0 no-repeat; /*background-size: 100%;*/ }
+
+/*preview-box*/
+.preview-box { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #333; z-index: 100; }

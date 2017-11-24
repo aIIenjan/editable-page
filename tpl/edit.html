@@ -33,7 +33,7 @@
 					<i class="icon iconfont icon-fullscreen dis-inline"></i>
 					<span class="dis-inline">退出全屏</span>
 				</button>
-				<button class="hd-box dis-inline btn-info">
+				<button class="hd-box dis-inline btn-info" onclick="previewPageShow($('.content-wrap'), $('#preview-box'))">
 					<i class="icon iconfont icon-eye dis-inline"></i>
 					<span class="dis-inline">预览</span>
 				</button>
@@ -49,22 +49,22 @@
 					<i></i>
 					容器
 				</div>
-				<div class="tag-con">
-					<div class="tag-con-list">
+				<div class="tag-con" id="tag-con">
+					<!-- <div class="tag-con-list">
 						<img src="../images/base/container_icon_2.png" alt="标签面板">
 						<span>标签面板</span>
 					</div>
 					<div class="tag-con-list">
 						<img src="../images/base/container_icon_1.png" alt="视窗面板">
 						<span>视窗面板</span>
-					</div>
+					</div> -->
 				</div>
 				<div class="tag-second-hd tag-hd cur" onclick="toggleFun($(this))">
 					<i></i>
 					控件
 				</div>
-				<div class="tag-con">
-					<div class="tag-con-list">
+				<div class="tag-con" id="menu-con">
+					<!-- <div class="tag-con-list">
 						<img src="../images/base/control_icon_2words.png" alt="静态文字">
 						<span>静态文字</span>
 					</div>
@@ -135,13 +135,11 @@
 					<div class="tag-con-list">
 						<img src="../images/base/control_icon_23popup.png" alt="弹出图片">
 						<span>弹出图片</span>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="rightbar" id="content">
-				<!-- <div class="leftline"></div> -->
-				<div class="right-wrap">
-					<div class="content-wrap" :style="isback_color"></div>
+				<div class="content-wrap" :style="isback_color" id="screen">
 				</div>
 			</div>
 		</div>
@@ -182,6 +180,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="preview-box" id="preview-box" ondblclick="previewPageHide($(this))"></div>
 	</div>
 </div>
 <script src="../js/jquery-1.11.1.min.js"></script>

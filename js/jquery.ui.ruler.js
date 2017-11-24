@@ -6,7 +6,8 @@
             tickMinor: 20,
             tickMicro: 10,
             showLabel: true,
-			arrowStyle: 'arrow'
+                arrowStyle: 'arrow',
+                bgImg:''
         },
 
         _$el: null,
@@ -59,22 +60,22 @@
             var $topRuler = $(document.createElement('div')).addClass('ruler').addClass('top');
             $topRuler.appendTo($container);
 
-			var toparrowClass, leftarrowClass
-			switch (this.options.arrowStyle) {
-			case 'arrow':
-				toparrowClass = 'top-arrow';
-				leftarrowClass = 'left-arrow';
-				break;
-			case 'line':
-				toparrowClass = 'top-line';
-				leftarrowClass = 'left-line';
-				break;
-			case 'none':
-				toparrowClass = 'top-none';
-				leftarrowClass = 'left-none';
-				break;
-			}
-			
+            var toparrowClass, leftarrowClass
+            switch (this.options.arrowStyle) {
+            case 'arrow':
+                toparrowClass = 'top-arrow';
+                leftarrowClass = 'left-arrow';
+                break;
+            case 'line':
+                toparrowClass = 'top-line';
+                leftarrowClass = 'left-line';
+                break;
+            case 'none':
+                toparrowClass = 'top-none';
+                leftarrowClass = 'left-none';
+                break;
+            }
+            
             var $topArrow = $(document.createElement('div')).addClass(toparrowClass);
             $topArrow.appendTo($topRuler);
 
@@ -86,8 +87,10 @@
             $leftArrow.appendTo($leftRuler);
 
             /* stage */
-            var $stage = $(document.createElement('div')).addClass('stage');
+            var $stage = $(document.createElement('div')).addClass('screen');
             $stage.appendTo($container);
+            $stage.data('type','screen');
+            $stage.addClass('res-container-item');
             $stage.append(this.element.contents());
 
 
@@ -324,6 +327,13 @@
 
             this._$topArrow.css('left', arrowX + this._scrollLeft);
             this._$leftArrow.css('top', arrowY + this._scrollTop);
+        },
+        
+        /**±ä¸ü±³¾°Í¼Æ¬*/
+        _changeBg:function(bgImg){
+            $('.screen').css({
+                'background-image': 'url("' + bgImg + '")', 
+            });
         },
 
         refresh: function () {
