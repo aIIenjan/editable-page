@@ -52,7 +52,7 @@ $(function() {
 
 // 折叠层js
 function toggleFun($this) {
-	$this.next('.tag-con').slideToggle()
+	$this.next('.tag-con').slideToggle();
 	if($this.hasClass('cur')) {
 		$this.removeClass('cur');
 	}else {
