@@ -115,7 +115,7 @@
 	var drawPanel = function($dom, type, className){
 	    this.DOM = document.createElement('div');
 	    this.DOM.setAttribute('data-type',type);
-	    this.DOM.setAttribute('class',className);
+		this.DOM.setAttribute('class',className);
 	    this.appendTo = function(){
 	        $dom.appendChild(this.DOM)
 	        return this;
@@ -125,15 +125,16 @@
 	            this.DOM.style[i] = option[i];
 	        }
 	        return this;
-	    };
-        $(this.DOM).draggable({
+		};
+		
+        $( this.DOM ).draggable({
 			cursor: "move",
         	containment: 'parent',
         	drag: function(e, ui) {
-        		ui.helper.css('z-index','999');
+        		// ui.helper.css('z-index','999');
         	},
         	stop: function(e, ui) {
-        		ui.helper.css('z-index','1');
+        		// ui.helper.css('z-index','1');
         	}
         });
 	};
@@ -178,16 +179,16 @@
 	            		cssValue = {position:'absolute', 'border-radius':'6px', border:'1px dashed #fff',width:'1010px',height:'400px', left: popLeft+'px', top: popTop+'px'}
 	            	}
                     drawDIV.css(cssValue);
-               //      $(drawDIV.DOM).draggable({
-            			// cursor: "move",
-               //      	containment: 'parent',
-               //      	drag: function(e, ui) {
-               //      		ui.helper.css('z-index','999');
-               //      	},
-               //      	stop: function(e, ui) {
-               //      		ui.helper.css('z-index','1');
-               //      	}
-               //      });
+                    // $(drawDIV.DOM).draggable({
+            		// 	cursor: "move",
+                    // 	containment: 'parent',
+                    // 	drag: function(e, ui) {
+                    // 		ui.helper.css('z-index','999');
+                    // 	},
+                    // 	stop: function(e, ui) {
+                    // 		ui.helper.css('z-index','1');
+                    // 	}
+                    // });
             	}
             },
             out: function(e, ui) {
@@ -234,10 +235,10 @@
             			cursor: "move",
                     	containment: 'parent',
                     	drag: function(e, ui) {
-                    		ui.helper.css('z-index','999');
+                    		// ui.helper.css('z-index','999');
                     	},
                     	stop: function(e, ui) {
-                    		ui.helper.css('z-index','1');
+                    		// ui.helper.css('z-index','1');
                     	}
                     });
             	}
@@ -295,6 +296,14 @@
 	}).keyup(function(){
 		$(this).colpickSetColor(this.value);
 	});
+
+	//点击拖拽元素  加样式
+	$( '#screen' ).on('mousedown','.ui-draggable',function( el ){
+		$( '.ui-draggable' ).removeClass( 'model-active' )
+	 	$( el.target ).addClass( 'model-active' ) 
+		
+	})
+
 })(jQuery);
 
 // 折叠层js
